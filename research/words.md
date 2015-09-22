@@ -122,6 +122,9 @@ Let's try to get this list going from potentially simplest to more obscure topic
  9.  It's important to remember that several FP qualities are critical to getting declarative right and not springing crazy leaks where yr primitive details poke out.
  10.  Layers.
 
+##Other words##
+
+(add more and feel free to add yr 10 on some of the above and edit, improve, etc.)
 
  * currying vs. partial function application
  * head and tail
