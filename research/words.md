@@ -31,7 +31,7 @@ Let's try to get this list going from potentially simplest to more obscure topic
  9.  Functions should do one thing ideally.
  10.  Traditionally, functions only have one argument.  Don't let grandpa's FP get you down though.
  
- ##Map##
+##Map##
 
  1.  A function that calls a function on each of the individual members of a collection and returns a new collection.
  2.  Think of a real life map.  It takes points in our environment and projects them onto surface maintaining relationships, etc.
@@ -44,7 +44,7 @@ Let's try to get this list going from potentially simplest to more obscure topic
  9.  Don't confuse maps with plans which are more for destroying battle stations. 
  10.  Maps are declarative which means there's a whole class of bugs you'll never make again when you use them.
 
- ##Reduce##
+##Reduce##
 
  1.  Map's partner in the trinity.  Maps and reduce can both be implemented using eachother, etc.
  2.  Reduce uses an aggregator function to combine all the values in a collection in a single value.
@@ -57,7 +57,7 @@ Let's try to get this list going from potentially simplest to more obscure topic
  9.  Smooth jazz.
  10.  map and reduce are your friends even if they aren't pythonic.
 
- ##Filter##
+##Filter##
 
  1.  A method that takes a collection and a predicate function and returns the members of the collection that are true for that predicate.
  2.  A predicate takes an x and returns true or false.
@@ -70,7 +70,7 @@ Let's try to get this list going from potentially simplest to more obscure topic
  9.  A filter can be applied lazily.
  10.  Filters are declarative and should be used often even outside of FP.
 
- ##Composition##
+##Composition##
 
  1.  To assemble ideas together sequentially.
  2.  To call a function g with the result of the function f applied to x.  y = g ( f ( x ))
@@ -83,7 +83,7 @@ Let's try to get this list going from potentially simplest to more obscure topic
  9.  Matrices can be composed.
  10.  If f takes x and makes y and g takes y and makes z then g of f takes x and makes z.
 
- ##Recursion##
+##Recursion##
 
  1.  The ability for an idea or functionality or execution or data to be self-referential and continue on.
  2.  Functions can be recursive and call themselves in their body.
@@ -96,7 +96,7 @@ Let's try to get this list going from potentially simplest to more obscure topic
  9.  Recursion let's us keep things immutable in a function's context and we see change across call boundaries in the stack calls.
  10.  Recursion can lead to stack overflows in naive and overly optimistic solutions to a problem.  (There are optimizations however!  yay science!)
 
- ##Immutability##
+##Immutability##
 
  1.  Compuational state can be written once upon definition.
  2.  Promising for future thread safety and multi-core computing.
@@ -109,7 +109,7 @@ Let's try to get this list going from potentially simplest to more obscure topic
  9.  Append-only databases encourage immutability.
  10.  To programmers grown in imperative languages, assembly, and modern OO, immutability is hard at first, but the problems it solves are actually much, much harder.
 
- ##Declarative Style Coding##
+##Declarative Style Coding##
 
  1.  Coding style emphasizing what the coder wants and less how it should be accomplished.
  2.  With composition and higher-order functions, it's easy to grow your abstractions such that more primitive mechanisms in computing are unnecessary.
