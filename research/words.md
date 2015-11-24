@@ -8,10 +8,10 @@ Let's try to get this list going from potentially simplest to more obscure topic
 ##REPL##
  
  1.  A simple way to interact with a programming language
- 2.  Read eval print loop 
+ 2.  read-eval-print-loop [the lispy form: `(loop (eval (print (read))))` ]
  3.  Stores state and values of variables, etc.
- 4.  As powerful as any program just requires that you type stuff (or load it in)
- 5.  In some use cases, you don't want saved programs, you want computation
+ 4.  As powerful as any program, just requires that you type stuff (or load it in)
+ 5.  In some use cases you don't want saved programs - you want computation
  6.  Loading libraries are handy 
  7.  Repl driven development... like a live action performance of TDD
  8.  A great way to get a repl into production or test environment and see what's going on behind the scenes
@@ -22,10 +22,10 @@ Let's try to get this list going from potentially simplest to more obscure topic
  
  1.  Mathematically a transform that maps values from one set into values of another set.  So it has inputs and returns an output.
  2.  In FP, functions are data!  Hence they are "First Class" and have all the benefits of that.
- 3.  Pure functions always return the same output for a given input... ie Deterministic.  You can reason about it!  Spock is happy!  
+ 3.  Pure functions always return the same output for a given input... i.e. they are "eterministic".  You can reason about it!  Spock is happy!  
  4.  No side effects.  The only result of calling f on a value x is value returned.  There is no action on the side.  No cheating on your caller.  
  5.  Many languages have anonymous functions that have no name.  Or shorthand notation called Lambda functions.
- 6.  Lambdas actually are the creation of Alfonzo Church and he essentially had a theory of computing all based upon these shorthand functions.  
+ 6.  Lambdas actually are the creation of Alonzo Church and he essentially had a theory of computing all based upon these shorthand functions.  
  7.  You could even store numbers in them, etc.  Church numerals.
  8.  Functions should be small.
  9.  Functions should do one thing ideally.
@@ -40,13 +40,13 @@ Let's try to get this list going from potentially simplest to more obscure topic
  5.  I like to think of functions as maps in an abstract sense, but map is really just a common workhorse function you'll find in many languages.  Select in SQL, C# Linq select method, map in python, _.map in _.js, List.Map, etc etc.
  6.  Remember that in FP, since functions are data, you could map over a collection of functions...
  7.  Dora the explorer's pal.
- 8.  Maps are commonly thought to be implemented by recursing over a collection linearly head over tail but there's lot's of parallel implementations or implementations that traverse trees, etc.  Lazy maps.
+ 8.  Maps are commonly thought to be implemented by recursing over a collection linearly head over tail but there's lots of parallel implementations or implementations that traverse trees, etc.  Lazy maps.
  9.  Don't confuse maps with plans which are more for destroying battle stations. 
  10.  Maps are declarative which means there's a whole class of bugs you'll never make again when you use them.
 
 ##Reduce##
 
- 1.  Map's partner in the trinity.  Maps and reduce can both be implemented using eachother, etc.
+ 1.  Map's partner in the trinity.  Maps and reduce can both be implemented using each other, etc.
  2.  Reduce uses an aggregator function to combine all the values in a collection in a single value.
  3.  You can do a ton of things with reduce.  
  4.  Again, its declarative style makes your code vanish and get terse which is sometimes a pain in the butt to read if you're not kind but often is amazing.
@@ -73,15 +73,15 @@ Let's try to get this list going from potentially simplest to more obscure topic
 ##Composition##
 
  1.  To assemble ideas together sequentially.
- 2.  To call a function g with the result of the function f applied to x.  y = g ( f ( x ))
- 3.  In FP, you can compose g and f together with passing in the x just yet and pass that h = f . g around.
+ 2.  To call a function `g` with the result of the function `f` applied to `x`: `y = g ( f ( x ))`
+ 3.  In FP, you can compose `g` and `f` together without passing in the `x` just yet and pass that `h = f . g` around.
  4.  Composition not only allows us to build incredibly complex functionality but it also allows us to build data structures and even the simplest data.
  5.  Lambda Calculus makes extensive use of composition.
  6.  Notes in a symphony and sentences in a paragraph assemble together in a composition.
  7.  Data structures built with composition are immutable and yet can be used to create new data structures.  Change is possible!
  8.  Foundational.
  9.  Matrices can be composed.
- 10.  If f takes x and makes y and g takes y and makes z then g of f takes x and makes z.
+ 10.  If `f` takes `x` and makes `y` and `g` takes `y` and makes `z` then `g` of `f` takes `x` and makes `z`.
 
 ##Recursion##
 
@@ -90,10 +90,10 @@ Let's try to get this list going from potentially simplest to more obscure topic
  3.  Trees can be recursive and have other trees on their leaves.
  4.  Often recursive algorithms using recursive functions will have a halting condition.
  5.  Essentially, it's helpful to stop or reach an end.  
- 6.  Trees get smaller and small and eventually stop when they become leaves.
+ 6.  Trees get smaller and smaller and eventually stop when they become leaves.
  7.  A function will process a list until the list is empty.  Each successive call passes a smaller list.
  8.  Recursion is one of the fundamental theories of computation we get from the 30s.
- 9.  Recursion let's us keep things immutable in a function's context and we see change across call boundaries in the stack calls.
+ 9.  Recursion lets us keep things immutable in a function's context and we see change across call boundaries in the stack calls.
  10.  Recursion can lead to stack overflows in naive and overly optimistic solutions to a problem.  (There are optimizations however!  yay science!)
 
 ##Immutability##
@@ -119,12 +119,12 @@ Let's try to get this list going from potentially simplest to more obscure topic
  6.  For loops allowed us to avoid branches and addr locations.  Foreach allowed us to avoid looping variable errors.  Map and reduce allowed us to forgo a loop altogether and just perform operations on sets.
  7.  SQL might be the most widely used declarative language.
  8.  Whole classes of errors go away when developers hide technical mechanisms.
- 9.  It's important to remember that several FP qualities are critical to getting declarative right and not springing crazy leaks where yr primitive details poke out.
+ 9.  It's important to remember that several FP qualities are critical to getting declarative right and not springing crazy leaks where your primitive details poke out.
  10.  Layers.
 
 ##Other words##
 
-(add more and feel free to add yr 10 on some of the above and edit, improve, etc.)
+(add more and feel free to add your 10 on some of the above and edit, improve, etc.)
 
  * currying vs. partial function application
  * head and tail
@@ -152,4 +152,3 @@ Let's try to get this list going from potentially simplest to more obscure topic
  * append only
  * macros
  * abstract syntax trees
-
